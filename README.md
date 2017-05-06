@@ -28,7 +28,7 @@ $ git clone git@github.com:symfony/symfony-docs.git docs
 4. Build docs
 
 ```bash 
-$ docker run --rm -v `pwd`/docs:/symfony-doc symfony-doc-builder
+$ docker run --rm -v `pwd`:`pwd` -w `pwd`/docs/_build symfony-doc-builder make html
 ```
 
 5. View docs 
